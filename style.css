@@ -19,6 +19,10 @@
   src: url(assets/fonts/static/Inter-Regular.ttf) format("truetype");
 }
 
+body {
+  background-color: var(--Grey900);
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -38,9 +42,22 @@ main {
   padding: 20px;
   border-radius: 10px;
 }
-@media (max-width: 400px) {
-  .main {
-    padding: 20px;
+
+@media (max-width: 75rem) {
+  body {
+    padding: 20px 20px 0;
+  }
+  .container {
+    width: 400px;
+    padding: 30px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  body {
+    background-color: var(--Grey900);
+    padding: 15px 15px 0;
   }
   .container {
     width: 80%;
@@ -101,6 +118,7 @@ button:hover {
 }
 
 .attribution {
+  margin-top: 10px;
   font-size: 0.6875rem;
   text-align: center;
   background-color: var(--Grey900);
